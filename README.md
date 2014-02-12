@@ -1,6 +1,6 @@
 # BatchIt
 
-TODO: Write a gem description
+Quick and dirty (possibly batch) processing of .markdown.erb files.
 
 ## Installation
 
@@ -18,7 +18,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'batch_it'
+require 'ostruct'
+
+puts BatchIt.new(DATA.read).result([OpenStruct.new(title: "One"), OpenStruct.new(title: "Two")])
+__END__
+<%= title %>
+=
+```
 
 ## Contributing
 
